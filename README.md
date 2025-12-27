@@ -71,7 +71,7 @@ Solution: Once an enemy was killed, the score in the top left should increase by
 
 Time Spent: 30 mins, 11:00 - 11:30
 
-##Problem: Removing Enemies After Level Transition
+## Problem: Removing Enemies After Level Transition
 
 Solution: First I tried iterating through the game object list that had been created to keep only 5 enemies on screen, then destroy the game object and remove the element reference. After some trial and error with checking that the for loop was targeting the right list index and that the correct list was being iterated through, I was unable to make this work.
 
