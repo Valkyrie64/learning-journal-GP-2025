@@ -70,3 +70,13 @@ Time Spent: 30 mins, 10:20 - 10:50
 Solution: Once an enemy was killed, the score in the top left should increase by 10, but this wasn't happening. The reason why was because I was using the legacy UI system scripting to try and access TMP related components.
 
 Time Spent: 30 mins, 11:00 - 11:30
+
+##Problem: Removing Enemies After Level Transition
+
+Solution: First I tried iterating through the game object list that had been created to keep only 5 enemies on screen, then destroy the game object and remove the element reference. After some trial and error with checking that the for loop was targeting the right list index and that the correct list was being iterated through, I was unable to make this work.
+
+Next I tried making the enemies instantiate into an empty game object that I could then delete all the children of. This also didn't work as I would have needed to restructure a lot of the previous code and it would have been a better choice if I couldn't find another fix.
+
+Finally, I tried a much simpler process of finding any game object with the tag "Enemy" in the hierarchy and destroying them from there. This worked very well, after reordering some of the lines of code so that the destroyed objects in the transition didn't count towards enemies killed by the player.
+
+Time Spent: 95 mins, 15:00 - 16:35
